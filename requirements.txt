@@ -1,0 +1,6 @@
+robotframework-faker
+robotframework-csvlib
+robotframework-requests
+robotframework-debuglibrary
+robotframework-databaselibrary
+PyMySQL
