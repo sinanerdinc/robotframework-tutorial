@@ -10,7 +10,7 @@ jobs:
         steps:
         - uses: actions/checkout@v2
         - name: Create Folders
-          run: mkdir -p reports
+          run: mkdir -p reports && chmod 777 reports
         - name: Execute tests
           uses: joonvena/robotframework-docker-action@v0.1
           env:
