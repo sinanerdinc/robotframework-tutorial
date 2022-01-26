@@ -5,7 +5,7 @@ on:
     branches: [ master ]
 
 jobs:
-    test:
+    run-test:
         runs-on: ubuntu-latest
         steps:
         - uses: actions/checkout@v2
@@ -20,6 +20,8 @@ jobs:
             ROBOT_REPORTS_DIR: ${{ github.workspace }}/reports
             
     generate_report:
+      if: always()
+      needs: [run-test] 
       runs-on: ubuntu-latest
       steps:
         - name: Upload test results
