@@ -5,7 +5,7 @@ on:
     branches: [ master ]
 
 jobs:
-    run-test:
+    test:
         runs-on: ubuntu-latest
         steps:
         - uses: actions/checkout@v2
@@ -18,12 +18,6 @@ jobs:
             BROWSER: chrome
             ROBOT_TESTS_DIR: ${{ github.workspace }}/tests
             ROBOT_REPORTS_DIR: ${{ github.workspace }}/reports
-            
-    generate_report:
-      if: always()
-      needs: [run-test] 
-      runs-on: ubuntu-latest
-      steps:
         - name: Upload test results
           uses: actions/upload-artifact@v1
           if: always()
