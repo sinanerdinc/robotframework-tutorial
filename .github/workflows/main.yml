@@ -14,6 +14,7 @@ jobs:
         - name: Execute tests
           uses: joonvena/robotframework-docker-action@v0.1
           env:
+            ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
             BROWSER: chrome
             ROBOT_TESTS_DIR: ${{ github.workspace }}/tests
             ROBOT_REPORTS_DIR: ${{ github.workspace }}/reports
@@ -42,6 +43,7 @@ jobs:
         - name: Send report to commit
           uses: joonvena/robotframework-reporter-action@v0.1
           env:
+            ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
             GH_ACCESS_TOKEN: ${{ secrets.TOKEN }}
             REPO_OWNER: ${{ env.REPOSITORY_OWNER }}
             COMMIT_SHA: ${{ github.sha }}
