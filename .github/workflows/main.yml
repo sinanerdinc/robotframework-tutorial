@@ -1,6 +1,7 @@
 name: Robot Framework
 
 on:
+  workflow_dispatch:
   push:
     branches: [ master ]
 
