@@ -21,8 +21,8 @@ jobs:
             BROWSER: chrome
             ROBOT_TESTS_DIR: ${{ github.workspace }}/tests
             ROBOT_REPORTS_DIR: ${{ github.workspace }}/reports
-            ROBOT_OPTIONS: --xunit  deneme.xml
-            INPUT_ROBOT_OPTIONS: --xunit  deneme1.xml
+            ROBOT_OPTIONS: '--xunit  deneme.xml'
+            INPUT_ROBOT_OPTIONS: '--xunit  deneme1.xml'
         - name: Upload test results
           uses: actions/upload-artifact@v1
           if: always()
