@@ -1,8 +1,8 @@
 *** Settings ***
-Resource  ./resources/utilsApp.robot
-Resource  ./resources/homePageApp.robot
-Resource  ./resources/paginationApp.robot
-Resource  ./resources/articleDetailApp.robot
+Resource  ../resources/utilsApp.robot
+Resource  ../resources/homePageApp.robot
+Resource  ../resources/paginationApp.robot
+Resource  ../resources/articleDetailApp.robot
 Test Setup  utilsApp.create browser
 Test Teardown  utilsApp.close browser
 

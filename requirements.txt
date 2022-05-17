@@ -2,5 +2,7 @@ robotframework-faker
 robotframework-csvlib
 robotframework-requests
 robotframework-debuglibrary
+robotframework-seleniumlibrary
 robotframework-databaselibrary
 PyMySQL
+requests

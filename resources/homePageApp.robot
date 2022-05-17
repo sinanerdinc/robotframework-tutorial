@@ -1,5 +1,9 @@
 *** Settings ***
 Library  SeleniumLibrary
+Resource    ./utilsApp.robot
+
+*** Variables ***
+${site}    http://www.sinanerdinc.com
 
 *** Keywords ***
 go to homepage
@@ -11,5 +15,5 @@ go to category
 
 click article
     [Arguments]  ${number}
-    click element  xpath=//article[@class="post-preview"][${number}]/a/h2
+    utilsApp.click    xpath=//article[@class="post-preview"][${number}]/a/h2
 
