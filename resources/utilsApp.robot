@@ -2,6 +2,7 @@
 Library  SeleniumLibrary
 Library  String
 Library  DateTime
+Library  DebugLibrary
 
 *** Variables ***
 ${browser}  chrome
@@ -21,6 +22,9 @@ click
     [Arguments]  ${SELECTOR}
     Wait Until Page Contains Element  ${SELECTOR}
     click element  ${SELECTOR}
+
+debugger
+    debug
 
 press enter
     Press Keys  NONE  ENTER

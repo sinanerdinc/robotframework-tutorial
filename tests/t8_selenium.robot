@@ -9,10 +9,12 @@ Test Teardown  utilsApp.close browser
 
 *** Test Cases ***
 Example 1
+    [Tags]    smoke
     homePageApp.go to homepage
     paginationApp.click next page
     paginationApp.click previous page
     homePageApp.click article  3
+    utilsApp.debugger
     articleDetailApp.title should be  Map, Zip, Reduce ve Filter Fonksiyonları
 
 Example 2
