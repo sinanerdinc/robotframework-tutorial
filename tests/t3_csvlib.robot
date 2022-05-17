@@ -4,11 +4,11 @@ Library  CSVLib
 
 *** Test Cases ***
 Examples
-	${singlelist} =  CSVLib.Read CSV As Single List  test.csv
+	${singlelist} =  Read CSV As Single List    ./tests/test.csv
 	log to console  ${singlelist}
 
-	${list} =  CSVLib.read csv as list  test.csv
+	${list} =  read csv as list  ./tests/test.csv
 	log to console  ${list}
 
-	${dict} =  CSVLib.read csv as dictionary  test.csv  Animal  Legs
+	${dict} =  read csv as dictionary  ./tests/test.csv  Animal  Legs
 	log to console  ${dict}
