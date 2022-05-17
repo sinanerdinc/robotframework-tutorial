@@ -20,10 +20,11 @@ Examples GET
     Should Be Equal As Strings  ${resp.json()["id"]}  9
 
 Examples POST
-    &{data} =  Create dictionary  title=Robot Framework    body=Eğitim    userId=1090
+    &{data} =  Create dictionary  title=Robot Framework    body=Ankara Testing Days    userId=1090
     ${resp} =  POST On Session  Api  /posts  json=${data}
     Should Be Equal As Strings  ${resp.json()["id"]}  101
-    Should Be Equal As Strings  ${resp.json()["body"]}  Eğitim
+    Should Be Equal As Strings  ${resp.json()["body"]}  Ankara Testing Days
+    Should Be Equal As Strings  ${resp.json()["userId"]}  1090
 
 Examples PUT
     &{data} =  Create dictionary  title=Robot Framework    body=Updated    userId=1091
